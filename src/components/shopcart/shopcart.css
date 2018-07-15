@@ -1,0 +1,246 @@
+.shopcart {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	z-index: 50;
+	width: 100%;
+	height: 48px;
+	background: #141d27;
+}
+
+.shopcart .content {
+	font-size: 0;
+	display: flex;
+	background: #141d27;
+	color: rgba(255, 255, 255, .4);
+}
+
+.content .content-left {
+	flex: 1;
+}
+
+.content .content-left .logo-wrapper {
+	display: inline-block;
+	position: relative;
+	top: -10px;
+	margin: 0 12px;
+	padding: 6px;
+	width: 56px;
+	height: 56px;
+	box-sizing: border-box;
+	vertical-align: top;
+	border-radius: 50%;
+	background: #141d27;
+}
+
+.content-left .logo-wrapper .logo {
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	background: #2b343c;
+	text-align: center;
+}
+
+.content-left .logo-wrapper .logo.highLight {
+	background: rgb(0, 160, 220);
+}
+
+.logo .icon-shopping_cart {
+	font-size: 24px;
+	color: #80858a;
+	line-height: 44px;
+}
+
+.logo.highLight .icon-shopping_cart {
+	color: #fff;
+}
+
+.content-left .logo-wrapper .num {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 24px;
+	height: 16px;
+	line-height: 16px;
+	text-align: center;
+	border-radius: 16px;
+	font-size: 9px;
+	font-weight: 400;
+	color: #fff;
+	background: rgb(240, 20, 20);
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+}
+
+.content .content-left .price {
+	display: inline-block;
+	vertical-align: top;
+	line-height: 24px;
+	margin-top: 12px;
+	box-sizing: border-box;
+	padding-right: 12px;
+	border-right: 1px solid rgba(255, 255, 255, 0.1);
+	font-size: 16px;
+	font-weight: 700;
+}
+
+.content-left .price.highLight {
+	color: #fff;
+}
+
+.content .content-left .desc {
+	display: inline-block;
+	vertical-align: top;
+	line-height: 24px;
+	margin: 12px 0 0 12px;
+	font-size: 10px;
+	font-weight: 700;
+}
+
+.content .content-right {
+	flex: 0 0 105px;
+	width: 105px;
+}
+
+.content .content-right .pay {
+	font-size: 24px;
+	line-height: 48px;
+	text-align: center;
+	height: 48px;
+	font-size: 10px;
+	font-weight: 700;
+	background: #2B333b;
+}
+
+.content-right .pay.not-enough {
+	background: #2B333b;
+}
+
+.content-right .pay.enough {
+	background: #00b43c;
+	color: #fff;
+}
+
+.content .ball-container .ball {
+	position: fixed;
+	left: 32px;
+	bottom: 22px;
+	z-index: 200;
+	transform: translate3d(0, 0, 0);
+}
+
+.ball-container .ball .inner {
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	background: rgb(0, 160, 220);
+	transition: all .2s;
+	transform: translate3d(0, 0, 0);
+}
+
+.ball-container .drop-enter-active,
+.ball-container .drop--enter-to {
+	transition: all .2s cubic-bezier(0.49, -0.29, 0.75, 0.41);
+}
+
+
+/*列表*/
+
+.shopcart-list {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	width: 100%;
+	transition: all .8s;
+	transform: translate3d(0, 0, 0);
+}
+
+.shopcart-list .list-header {
+	height: 40px;
+	line-height: 40px;
+	padding: 0 18px;
+	background: #f3f5f7;
+	border-bottom: 1px solid rgba(7, 17, 27, 0.1);
+}
+
+.shopcart-list .list-header .title {
+	float: left;
+	font-size: 14px;
+	color: rgb(7, 17, 27);
+}
+
+.shopcart-list .list-header .empty {
+	float: right;
+	font-size: 12px;
+	color: rgb(0, 160, 220);
+}
+
+.shopcart-list .list-content {
+	padding: 0 18px;
+	max-height: 217px;
+	background: #fff;
+	overflow: hidden;
+	width: 93%;
+}
+
+.list-content .food {
+	position: relative;
+	padding: 12px 0;
+	box-sizing: border-box;
+	border-bottom: 1px solid rgba(7, 17, 27, 0.1);
+}
+
+.list-content .food .name {
+	line-height: 24px;
+	font-size: 14px;
+	color: rgb(7, 17, 27);
+}
+
+.list-content .food .price {
+	position: absolute;
+	right: 90px;
+	bottom: 12px;
+	line-height: 24px;
+	color: rgb(240, 20, 20);
+	font-weight: 700;
+	font-size: 14px;
+}
+
+.shopcart .cartcontrol-wrapper {
+	position: absolute;
+	right: 0;
+	bottom: 6px;
+}
+
+.shopcart-list.cart-trainsiton {
+	transform: translate3d(0, -100%, 0);
+}
+
+
+/*mask*/
+
+.list-mask {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 40;
+	transition: all .5s;
+	background: rgba(0, 0, 0, 0.8);
+	-webkit-filter: blur(10px);
+	-moz-filter: blur(50px);
+	-ms-filter: blur(50px);
+	filter: blur(50px);
+	filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=10, MakeShadow=false);
+}
+
+.list-mask.fade-enter-active,
+.list-mask.fade-leave-active {
+	background: rgba(0, 0, 0, 0.8);
+	-webkit-filter: blur(50px);
+	-moz-filter: blur(50px);
+	-ms-filter: blur(50px);
+	filter: blur(50px);
+	filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=10, MakeShadow=false);
+}

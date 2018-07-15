@@ -7,8 +7,10 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
+    "babel-runtime": "^6.0.0",
     "vue": "^2.5.16",
-    "vue-router": "^3.0.1"
+    "vue-router": "^3.0.1",
+    "better-scroll": "^1.4.2"
   },
   "devDependencies": {
     "@vue/cli-service": "^3.0.0-rc.4",

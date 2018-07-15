@@ -1,0 +1,60 @@
+body,
+html {
+	line-height: 1;
+	font-weight: 200;
+	font-family: "PingFang SC", "STHeitiSC-Light", "helvetica";
+}
+
+div#main,div.detail {
+	min-width: 390px;
+}
+
+@media (min-device-pixel-ratio: 1.5),
+(-webkit-min-device-pixel-ratio:1.5) {
+	.border-1px::after {
+		-webkit-transform: scaleY(0.7);
+		transform: scaleY(0.7);
+	}
+}
+
+@media (min-device-pixel-ratio: 2),
+(-webkit-min-device-pixel-ratio:2) {
+	.border-1px::after {
+		-webkit-transform: scaleY(0.5);
+		transform: scaleY(0.5);
+	}
+}
+
+.bgTi-img {
+	background-image: url(./../../components/header/img/brand@2x.png);
+}
+
+@media (min-device-pixel-ratio: 3),
+(-webkit-min-device-pixel-ratio:3) {
+	.bgTi-img {
+		background-image: url(./../../components/header/img/brand@3x.png);
+	}
+}
+
+.bgNotice-img {
+	background-image: url(./../../components/header/img/bulletin@2x.png);
+}
+
+@media (min-device-pixel-ratio: 3),
+(-webkit-min-device-pixel-ratio:3) {
+	.bgNotice-img {
+		background-image: url(./../../components/header/img/bulletin@3x.png);
+	}
+}
+/*清除浮动*/
+.clearfix{
+	display: inline-block;
+}
+.clearfix::after{
+	content: ".";
+	display: block;
+	height: 0;
+	line-height:0;
+	clear: both;
+	visibility: hidden;
+}
